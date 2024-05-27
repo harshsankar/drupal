@@ -1,0 +1,20 @@
+p.custom {
+  color: white;
+  background-color: #0c0d0e;
+  border: solid white;
+}
+.custom-form-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-form-table th, .custom-form-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.custom-form-table th {
+  background-color: #f4f4f4;
+}
+

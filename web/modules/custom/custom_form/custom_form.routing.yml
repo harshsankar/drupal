@@ -1,0 +1,24 @@
+custom_form.form:
+  path: '/custom-form'
+  defaults:
+    _form: '\Drupal\custom_form\Form\CustomForm'
+    _title: 'Create Student Node'
+  requirements:
+    _permission: 'access content'
+  
+custom_form.custom_route:
+  path: '/view'
+  defaults:
+    _controller: '\Drupal\custom_form\Controller\CustomFormController::customRoute'
+    _title: 'Custom Form Display'
+  requirements:
+    _permission: 'access content'
+
+custom_form.edit_form:
+  path: '/custom-form/{node}/edit'
+  defaults:
+    _controller: '\Drupal\custom_form\Controller\CustomFormController::editForm'
+    _title: 'Edit Student'
+  requirements:
+    _permission: 'access content'
+

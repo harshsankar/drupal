@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation for displaying custom form data in a table.
+ *
+ * Available variables:
+ * - table: The table containing form data.
+ */
+#}
+<div class="custom-form-display">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>firstname</th>
+        <th>lasttname</th>
+        <th>Email</th>
+        <th>mobile no</th>
+        <th>dob</th>
+        <th>gender</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in table['#rows'] %}
+        <tr>
+          <td>{{ row['ID'] }}</td>
+          <td>{{ row['firstname'] }}</td>
+          <td>{{ row['lastname'] }}</td>
+          <td>{{ row['Email'] }}</td>
+          <td>{{ row['mobilenumber'] }}</td>
+         <td>{{ row['dob'] }}</td
+          <td>{{ row['gender'] }}</td
+          <td>
+            <a href="{{ path('edit_route', {'nid': row['ID']}) }}" class="btn btn-success">Edit</a>
+            <a href="{{ path('delete_route', {'nid': row['ID']}) }}" class="btn btn-danger">Delete</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

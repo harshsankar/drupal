@@ -1,0 +1,7 @@
+name: 'Custom Form Module'
+type: module
+description: 'Provides functionality to render a table of nodes of type "custom_form".'
+core_version_requirement: ^8 || ^9
+package: Custom
+dependencies:
+  - drupal:node
